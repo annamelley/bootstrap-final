@@ -1,1 +1,129 @@
 /* ADD YOUR CUSTOM CSS TO THIS FILE BELOW */
+
+/* FONTS */
+/* Load the Trade Winds font using @font-face */
+@font-face {
+  font-family: "Trade Winds";
+  src: url("fonts/TradeWinds-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular weight */
+  font-style: normal; /* Normal style */
+}
+
+/* Define the class to apply the Trade Winds font */
+.trade-winds-regular {
+  font-family: "Trade Winds", system-ui, sans-serif; /* Fall back to system-ui or sans-serif */
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px; /* Apply font size here */
+}
+
+/* Load the Space Mono font using @font-face */
+@font-face {
+  font-family: "Space Mono";
+  src: url("fonts/SpaceMono-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular weight */
+  font-style: normal; /* Normal style */
+}
+
+/* Define the class to apply the Space Mono font */
+.space-mono-regular {
+  font-family: "Space Mono", monospace; /* Fall back to monospace */
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px; /* Apply font size here */
+}
+/* SPACE MONO END */
+
+
+/* NAVBAR */
+
+.navbar {
+  background-color: #044E57; /* blue green background */
+}
+
+.navbar .nav-link {
+  color: #FFFFFF; /* White text color for links */
+  font-family: "Trade Winds", system-ui; /* Change to your desired font */
+  font-size: 16px; /* Adjust the font size */
+  text-transform: uppercase; /* Optional: make text uppercase */
+  font-weight: 400; /* Optional: regular weight */
+}
+
+.navbar .nav-link:hover {
+  color: #C2E0AC; /* Lighter green on hover for contrast */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.navbar .dropdown-menu {
+  background-color: #333; /* Dropdown menu background color */
+  border: none; /* Remove border */
+}
+
+.navbar .dropdown-item {
+  color: #FFFFFF; /* White text color for dropdown items */
+  font-family: "Space Mono", monospace; /* Change font for dropdown items */
+  font-size: 14px; /* Adjust size for dropdown text */
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #C2E0AC; /* Highlight color on hover */
+  color: #044E57; /* Text color on hover */
+}
+
+
+/* Add a margin to the content to prevent overlap */
+body {
+  margin: 0; /* Remove default margin for consistent layout */
+}
+
+.content {
+  margin-top: 60px; /* Adjust this value to match your navbar height */
+}
+
+/* END NAVBAR */
+
+#carouselExampleFade {
+  margin-top: 90px;
+  margin-right: 120px;
+  margin-left: 120px;
+  margin-bottom: 50px;
+}
+
+body {  
+ background-color: #FFFCF2; /* Light cream background for carousel */
+}
+
+/* first centered text paragraph page 1 */
+.centered-text {
+  display: flex; /* Enable flexbox layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 20vh; /* Make the container fill the viewport height */
+  padding-right: 300px; /* Add padding to prevent text from going to the very edges */
+  padding-left:300px;
+  text-align: center; /* Center text within the element */
+}
+
+.centered-text p {
+  font-family: 'Space Mono', sans-serif;  /* Apply space mono font */
+  font-size: 20px;
+}
+
+/* chain symbol */
+.image-container {
+  display: flex;
+  justify-content: center; /* Centers the images horizontally */
+  gap: 10px; /* Adds spacing between the images */
+  margin-top: 20px; /* Adds space between the paragraph and images */
+  margin-bottom: 10px;
+}
+
+.symbol-image {
+  max-width: 150px; /* Adjust size of the images */
+  height: 150px; /* Maintains aspect ratio */
+}
+
+
+/* Menu page */
+  /* header font */
+  
