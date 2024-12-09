@@ -1,6 +1,7 @@
-/* ADD YOUR CUSTOM CSS TO THIS FILE BELOW */
-
+/* --------------------------------- */
 /* FONTS */
+/* --------------------------------- */
+
 /* Load the Trade Winds font using @font-face */
 @font-face {
   font-family: "Trade Winds";
@@ -9,7 +10,6 @@
   font-style: normal; /* Normal style */
 }
 
-/* Define the class to apply the Trade Winds font */
 .trade-winds-regular {
   font-family: "Trade Winds", system-ui, sans-serif; /* Fall back to system-ui or sans-serif */
   font-weight: 400;
@@ -25,108 +25,268 @@
   font-style: normal; /* Normal style */
 }
 
-/* Define the class to apply the Space Mono font */
 .space-mono-regular {
   font-family: "Space Mono", monospace; /* Fall back to monospace */
   font-weight: 400;
   font-style: normal;
   font-size: 30px; /* Apply font size here */
 }
-/* SPACE MONO END */
 
-
+/* --------------------------------- */
 /* NAVBAR */
+/* --------------------------------- */
 
 .navbar {
-  background-color: #044E57; /* blue green background */
+  background-color: #044E57; /* Blue-green background */
 }
 
 .navbar .nav-link {
-  color: #FFFFFF; /* White text color for links */
-  font-family: "Trade Winds", system-ui; /* Change to your desired font */
-  font-size: 16px; /* Adjust the font size */
-  text-transform: uppercase; /* Optional: make text uppercase */
-  font-weight: 400; /* Optional: regular weight */
+  color: #FFFFFF; /* White text */
+  font-family: "Trade Winds", system-ui;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .navbar .nav-link:hover {
-  color: #C2E0AC; /* Lighter green on hover for contrast */
-  text-decoration: none; /* Remove underline on hover */
+  color: #C2E0AC; /* Lighter green on hover */
+  text-decoration: none; /* Remove underline */
 }
 
 .navbar .dropdown-menu {
-  background-color: #333; /* Dropdown menu background color */
+  background-color: #333; /* Dark background */
   border: none; /* Remove border */
 }
 
 .navbar .dropdown-item {
-  color: #FFFFFF; /* White text color for dropdown items */
-  font-family: "Space Mono", monospace; /* Change font for dropdown items */
-  font-size: 14px; /* Adjust size for dropdown text */
+  color: #FFFFFF; /* White text */
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
 }
 
 .navbar .dropdown-item:hover {
-  background-color: #C2E0AC; /* Highlight color on hover */
-  color: #044E57; /* Text color on hover */
+  background-color: #C2E0AC; /* Highlight color */
+  color: #044E57; /* Text color */
 }
 
-
-/* Add a margin to the content to prevent overlap */
+/* Adjust body content margin for navbar overlap */
 body {
-  margin: 0; /* Remove default margin for consistent layout */
+  margin: 0; /* Remove default margin */
 }
 
 .content {
-  margin-top: 60px; /* Adjust this value to match your navbar height */
+  margin-top: 60px; /* Match navbar height */
 }
 
-/* END NAVBAR */
+/* --------------------------------- */
+/* CAROUSEL */
+/* --------------------------------- */
 
 #carouselExampleFade {
-  margin-top: 90px;
-  margin-right: 120px;
-  margin-left: 120px;
-  margin-bottom: 50px;
+  margin: 90px 120px 50px; /* Top, Right/Left, Bottom */
 }
 
-body {  
- background-color: #FFFCF2; /* Light cream background for carousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #044E57; /* Control arrow color */
+  border-radius: 50%; /* Circular background */
+  width: 40px;
+  height: 40px;
 }
 
-/* first centered text paragraph page 1 */
+body {
+  background-color: #FFFCF2; /* Light cream background */
+}
+
+/* --------------------------------- */
+/* CENTERED TEXT (PAGE 1) */
+/* --------------------------------- */
+
 .centered-text {
-  display: flex; /* Enable flexbox layout */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 20vh; /* Make the container fill the viewport height */
-  padding-right: 300px; /* Add padding to prevent text from going to the very edges */
-  padding-left:300px;
-  text-align: center; /* Center text within the element */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Adjust height dynamically based on content */
+  padding: 0 15%;
+  text-align: center;
+  box-sizing: border-box;
+  word-wrap: break-word;
 }
 
 .centered-text p {
-  font-family: 'Space Mono', sans-serif;  /* Apply space mono font */
+  font-family: 'Space Mono', sans-serif;
   font-size: 20px;
+  line-height: 1.6; /* Improve readability */
+  margin: 10px 0; /* Add spacing between paragraphs */
 }
 
-/* chain symbol */
+/* Symbol image container */
 .image-container {
   display: flex;
-  justify-content: center; /* Centers the images horizontally */
-  gap: 10px; /* Adds spacing between the images */
-  margin-top: 20px; /* Adds space between the paragraph and images */
-  margin-bottom: 10px;
+  justify-content: center;
+  gap: 10px; /* Space between images */
+  margin: 20px 0; /* Add spacing above and below */
 }
 
 .symbol-image {
-  max-width: 150px; /* Adjust size of the images */
-  height: 150px; /* Maintains aspect ratio */
+  max-width: 100px; /* Smaller size for responsiveness */
+  height: auto;
+  padding: 5px;
+}
+
+.centered-text {
+  padding-bottom: 70px; /* Room above the footer */
+  text-align: center;
+}
+
+.centered-text p:last-child {
+  margin-bottom: 0; /* Avoid stacking extra margin if padding is used */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .centered-text {
+    padding: 0 8%; /* Slightly reduce padding */
+  }
+  .centered-text p {
+    font-size: 18px; /* Slightly smaller font size */
+    line-height: 1.5; /* Adjust line spacing */
+  }
+  .symbol-image {
+    max-width: 80px; /* Adjust size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .centered-text {
+    padding: 0 5%; /* Reduce padding further for very small screens */
+  }
+  .centered-text p {
+    font-size: 16px; /* Smaller font size */
+  }
+  .symbol-image {
+    max-width: 60px; /* Further reduce size */
+  }
 }
 
 
-/* Menu page */
-  /* header font */
-  
+/* --------------------------------- */
+/* CHAINS SYMBOL IMAGE */
+/* --------------------------------- */
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.symbol-image {
+  max-width: 150px;
+  height: 150px;
+  padding: 10px;
+}
+
+/* --------------------------------- */
+/* MENU / SHOP */
+/* --------------------------------- */
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px;
+}
+
+.menu-item {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd; /* Optional border */
+  border-radius: 5px;
+}
+
+.drink-image,
+.menu-image, .clothes-image {
+  width: 400px; /* Image size */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-items {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}
+
+/* fonts */
+/* Apply Space Mono font to item name and description */
+.item-name, .item-description {
+  font-family: "Space Mono", monospace;
+  font-weight: 400; /* Regular weight */
+  font-style: normal; /* Normal style */
+}
+
+.clothes-image {
+  position: relative;
+  width: 400px; /* Adjust image size */
+  height: auto;
+  margin-bottom: 10px;
+  overflow: hidden; /* Ensure the zoomed part stays inside the image container */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.clothes-image:hover {
+  transform: scale(1.3); /* Zoom in the image */
+}
+
+/* Optionally, you can add a border or shadow for emphasis */
+.clothes-image:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+}
+
+
+/* --------------------------------- */
+/* Contact page */
+/* --------------------------------- */
+
+.centered-text p {
+  margin-bottom: 40px; /* Adds space below each paragraph */
+}
+
+.contact-details p {
+  margin-bottom: 40px; /* Adds space between contact details paragraphs */
+}
+
+.image-container {
+  margin: 20px 0; /* Adds space above and below the image */
+}
+
+
+
+/* --------------------------------- */
+/* FOOTER */
+/* --------------------------------- */
+
+.footer {
+  background-color: #044E57; /* Custom dark blue-green background */
+  color: #FFFFFF; /* White text */
+  padding: 20px 0;
+  font-family: 'Space Mono', monospace; /* Use your custom font */
+  text-align: center;
+}
+
+.footer a {
+  color: #C2E0AC; /* Light green links */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #FFFFFF; /* White on hover */
+  text-decoration: underline;
+}
+
+
 
 
 
